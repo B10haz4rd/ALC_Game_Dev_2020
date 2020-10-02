@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7527065146413729246}
   - component: {fileID: 7527065146412670944}
   - component: {fileID: 7527065146401218767}
+  - component: {fileID: 3624019202567202363}
   m_Layer: 0
   m_Name: Food_Organic_Pear_02
   m_TagString: Untagged
@@ -26,13 +27,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7527065146410431568}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.58, y: 1.46, z: 26.5}
   m_LocalScale: {x: 3.09325, y: 2.5, z: 2.92575}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!33 &7527065146413729246
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -95,3 +96,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
+--- !u!114 &3624019202567202363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527065146410431568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea746c95af46f4dedbbe686c8c2b09ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
