@@ -21,14 +21,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Collect Input on Horizontal controlls
         horizontalInput = Input.GetAxis("Horizontal");
         //allows the player to move right and left
         transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-        //keeps the player in bounds
+        //keeps the player in bounds left
         if(transform.position.x < -xRange)
         {
             transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
+        //places a boundry to the right
         if (transform.position.x > xRange)
         {
          transform.position = new Vector3(xRange, transform.position.y,transform.position.z);
