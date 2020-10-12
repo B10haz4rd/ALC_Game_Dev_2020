@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 7527065146413729246}
   - component: {fileID: 7527065146412670944}
   - component: {fileID: 7527065146401218767}
-  - component: {fileID: 3624019202567202363}
+  - component: {fileID: 1548386118}
+  - component: {fileID: 1548386117}
+  - component: {fileID: -5661810893284969763}
   m_Layer: 0
   m_Name: Food_Organic_Pear_02
   m_TagString: Untagged
@@ -27,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7527065146410431568}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.58, y: 1.46, z: 26.5}
   m_LocalScale: {x: 3.09325, y: 2.5, z: 2.92575}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7527065146413729246
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -96,7 +98,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 40
---- !u!114 &3624019202567202363
+--- !u!54 &1548386118
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527065146410431568}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1548386117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527065146410431568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.27469635, y: 0.4664595, z: 0.27468923}
+  m_Center: {x: 0, y: 0.23322976, z: 0}
+--- !u!114 &-5661810893284969763
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,6 +136,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7527065146410431568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea746c95af46f4dedbbe686c8c2b09ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 3de0c5aabd39b4a63af3dec0dd18ee84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
