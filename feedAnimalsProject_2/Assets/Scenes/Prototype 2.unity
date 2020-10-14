@@ -607,10 +607,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1128504160}
+  - component: {fileID: 1128504161}
   m_Layer: 0
   m_Name: spawnManager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -622,12 +623,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1128504159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 11.5, z: 1.4}
+  m_LocalPosition: {x: 0.3, y: 11.5, z: 6.4}
   m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128504161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128504159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39531c433b9aa4d8c8d09879732d8111, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animalPrefabs:
+  - {fileID: 4932320561572322539, guid: 6633b8166318c4866ab266f48fde1f9e, type: 3}
+  - {fileID: 4572352295215144402, guid: 89d0d4e3750d24e0599dc98e68cf7ce1, type: 3}
+  - {fileID: 1700448356236833910, guid: df6e3fb1c1c7a4d7c9660f345fd2fc84, type: 3}
 --- !u!1 &1548386111 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7527065146410431568, guid: bfe86fe79cea24294b1642fc3b6fd993,
