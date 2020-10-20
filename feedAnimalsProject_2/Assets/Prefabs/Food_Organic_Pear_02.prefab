@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1548386118}
   - component: {fileID: 1548386117}
   - component: {fileID: -5661810893284969763}
+  - component: {fileID: -3325379995545369751}
   m_Layer: 0
   m_Name: Food_Organic_Pear_02
   m_TagString: Untagged
@@ -137,5 +138,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3de0c5aabd39b4a63af3dec0dd18ee84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3325379995545369751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7527065146410431568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e1fb6a59d6da48b0b6c487c59ef4ec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
