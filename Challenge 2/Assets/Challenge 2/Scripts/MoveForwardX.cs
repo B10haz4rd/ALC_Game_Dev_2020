@@ -9,6 +9,7 @@ public class MoveForwardX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //moves the dog negatively along the X axis.
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }
