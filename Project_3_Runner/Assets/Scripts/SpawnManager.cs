@@ -19,7 +19,7 @@ public class SpawnManager : MonoBehaviour
     }
 
     //spawn Obstacles at random intervals
-    void SpanwObstacle ()
+    void SpawnObstacle ()
     {
         Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
     }
