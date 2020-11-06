@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//we begin on lesson 3.2 part 6 today!
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float gravityModifier;
 
     public bool isOnGround = true;
+
+    public bool gameOver = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        isOnGround = true;
+        //when my game object's compare tag is on the ground than my player is on the ground, OTHERWISE if the  game object interacts with a obstacle then LOG "Game Over!"
+        if(collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+
+        }else if(collision.gameObject.CompareTag("Obstacle"))
+        {
+            gameOver = true;
+            Debug.Log("Game Over!");
+        }
     }
 }
