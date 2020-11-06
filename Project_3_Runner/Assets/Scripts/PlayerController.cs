@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//we begin on lesson 3.2 part 6 today!
+
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
