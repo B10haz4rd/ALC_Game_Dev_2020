@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
 
+    private Animator playerAnim;
+
     public float jumpForce;
 
     public float gravityModifier;
@@ -19,17 +21,21 @@ public class PlayerController : MonoBehaviour
     {
         playerRb = GetComponent<Rigidbody>();
 
+        playerAnim = GetComponent<Animator>();
+
         Physics.gravity *= gravityModifier;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //when the space bar is pressed force the Player to go up.
+        //when the space bar is pressed force the Player to go up. Animate the upward movement
         if (Input.GetKeyDown(KeyCode.Space)&& isOnGround)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
+
+            playerAnim.SetTrigger("Jump_trig");
         }
     }
 
