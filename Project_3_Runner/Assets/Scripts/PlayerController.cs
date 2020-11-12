@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //when the space bar is pressed force the Player to go up. Animate the upward movement
-        if (Input.GetKeyDown(KeyCode.Space)&& isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space)&& isOnGround && !gameOver)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
@@ -41,17 +41,20 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //when my game object's compare tag is on the ground than my player is on the ground, OTHERWISE if the  game object interacts with a obstacle then LOG "Game Over!"
+        //when my game object's compare tag is on the ground than my player is on the ground, OTHERWISE if the  game object interacts with a obstacle then LOG "Game Over!" and play a the DEATH ANIMATION
         if(collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
 
         }else if(collision.gameObject.CompareTag("Obstacle"))
         {
-            gameOver = true;
             Debug.Log("Game Over!");
-            //playerAnim.SetBool("Death_b, true");
-            //playerAnim.SetInteger("DeathType_int", 1);
+
+            gameOver = true;
+            
+            playerAnim.SetBool("Death_b", true);
+
+            playerAnim.SetInteger("DeathType_int", 1);
         }
     }
 }
