@@ -20,6 +20,12 @@ public class PlayerController : MonoBehaviour
 
     public ParticleSystem dirtParticle;
 
+    public AudioClip jumpSound;
+
+    public AudioClip crashSound;
+
+    private AudioSource playerAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +34,8 @@ public class PlayerController : MonoBehaviour
         playerAnim = GetComponent<Animator>();
 
         Physics.gravity *= gravityModifier;
+
+        playerAudio = GetComponent<AudioSource>();
 
     }
 
@@ -43,12 +51,14 @@ public class PlayerController : MonoBehaviour
             dirtParticle.Stop();
 
             playerAnim.SetTrigger("Jump_trig");
+
+            playerAudio.PlayOneShot(jumpSound, 1.0f);
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        //when my game object's compare tag is on the ground than my player is on the ground, OTHERWISE if the  game object interacts with a obstacle then LOG "Game Over!" and play a the DEATH ANIMATION
+        //when my game object's compare tag is on the ground than my player is on the ground, OTHERWISE if the  game object interacts with a obstacle then LOG "Game Over!" and play a the DEATH ANIMATION and play the CRASH sound
         if(collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
@@ -69,6 +79,8 @@ public class PlayerController : MonoBehaviour
             explosionParticle.Play();
 
             dirtParticle.Stop();
+
+            playerAudio.PlayOneShot(crashSound, 1.0f);
         }
     }
 }
