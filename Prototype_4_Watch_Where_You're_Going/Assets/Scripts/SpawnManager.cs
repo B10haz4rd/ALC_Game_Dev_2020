@@ -9,7 +9,15 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(enemyPrefab, new Vector3(0, 0, 6), enemyPrefab.transform.rotation);
+        //spawn enemy at a random position on the X and Z axis between positive and negative nine
+
+        float spawnPosX = Random.Range(-9,9);
+
+        float spawnPosZ = Random.Range(-9,9);
+
+        Vector3 randomPos =  new Vector3(spawnPosX, 0, spawnPosZ);
+
+        Instantiate(enemyPrefab, randomPos ,enemyPrefab.transform.rotation);
     }
 
     // Update is called once per frame
