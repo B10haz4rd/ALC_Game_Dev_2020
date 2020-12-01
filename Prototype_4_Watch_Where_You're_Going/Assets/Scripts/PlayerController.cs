@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 5.0f;
 
+    public bool hasPowerUp;
+
     private Rigidbody playerRb;
 
     private GameObject focalPoint;
@@ -24,5 +26,24 @@ public class PlayerController : MonoBehaviour
         //allows you to controll the player to move toward the FOCAL POINT camera angle
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
+    }
+
+    //when the PLAYER collides with the  POWERUP the POWERUP is DESTROYED
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Powerup"))
+        {
+            hasPowerUp = true;
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy") && hasPowerUp)
+        {
+            Debug.Log("Collided with: " + collision.gameObject.name + "with powerup set to " + hasPowerUp);
+        }
     }
 }
