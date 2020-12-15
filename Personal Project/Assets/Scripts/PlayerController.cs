@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     //speed of the player
-    private float speed = 30.0f;
+    private float speed = 15.0f;
 
     //upper and lower bound limit
     private float zBound = 24;
@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
         ConstrainPlayerPosition();
+
+        //enemy should face toward the mouse
     }
 
     //Moves the player based on arrow key input
