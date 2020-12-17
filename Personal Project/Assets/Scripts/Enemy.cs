@@ -25,9 +25,18 @@ public class Enemy : MonoBehaviour
 
         Vector3 lookDirection = (player.transform.position - transform.position).normalized;
 
-        enemyRB.AddForce(lookDirection * speed);
+        enemyRB.AddForce(lookDirection * speed * Time.deltaTime);
 
         if (transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    //when enemy collides with the player PROJECTILE the enemy is DESTROYED
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Projectile"))
         {
             Destroy(gameObject);
         }
