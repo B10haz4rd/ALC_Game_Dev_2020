@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        //find the forward input and apply the Ridgid body
         float forwardInput = Input.GetAxis("Vertical");
         playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput);
     
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             // Instantiate(/projectilePrefab.transform.position = transform.position + Camera.main.transform.forward *2);
-            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            GameInstantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
     private void OnCollisionEnter(Collision collision)
