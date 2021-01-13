@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             // Instantiate(/projectilePrefab.transform.position = transform.position + Camera.main.transform.forward *2);
-            GameInstantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
+            Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
         }
     }
     private void OnCollisionEnter(Collision collision)
