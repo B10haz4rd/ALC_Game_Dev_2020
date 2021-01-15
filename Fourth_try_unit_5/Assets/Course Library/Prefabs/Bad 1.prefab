@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -7052290642524129504}
   m_Layer: 0
   m_Name: Bad 1
-  m_TagString: Untagged
+  m_TagString: Bad
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -131,8 +131,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.42606845, y: 0.60958624, z: 0.44799495}
-  m_Center: {x: -0.000000014901161, y: 0.08079566, z: 0.000000052154064}
+  m_Size: {x: 0.61936194, y: 0.7521798, z: 0.44799495}
+  m_Center: {x: -0.017428184, y: 0.07604251, z: 0.000000047683717}
 --- !u!114 &-7052290642524129504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,3 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7d45eaef64e04eaf9f2e5b931126589, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointValue: -10
+  explosionParticle: {fileID: 2088871590894813759, guid: 745208c9d6e104225bd99e1ab894e3bb,
+    type: 3}
