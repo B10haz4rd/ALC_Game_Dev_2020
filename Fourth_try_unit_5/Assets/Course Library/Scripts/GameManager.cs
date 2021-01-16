@@ -22,28 +22,21 @@ public class GameManager : MonoBehaviour
     private int score;
 
     private float spawnRate = 1.0f;
+
     
-    // Start is called before the first frame update
-    void Start()
-    { 
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //when the mouse is clicked down on an object, that object is deleted.
     private void OnMouseDown()
     {
         Destroy(gameObject);
     }
+    
+    //when something collides with the object below the screen and is triggerd, delete it.
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
     }
 
+    //spawning algorithm
     IEnumerator SpawnTarget()
     {
         while(isGameActive)
@@ -54,25 +47,26 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
+        //assists in the growth of our score
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
         scoreText.text = "Score: " + score;
     }
 
+    //causes the game over screen to come on.
     public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;
         restartButton.gameObject.SetActive(true);
     }
-
+    //game restarts when a thing is pressed.
     public void RestartGame()
     { 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
-
+    //gives some "settings" that need to present when the game begins.
     public void StartGame(int difficulty)
     {
         isGameActive = true;

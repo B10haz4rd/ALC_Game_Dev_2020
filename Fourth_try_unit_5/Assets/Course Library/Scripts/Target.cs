@@ -18,6 +18,7 @@ public class Target : MonoBehaviour
 
     // Start is called before the first frame update
     
+    //on start, grab code from game manager, and shoot up objects at random speeds and rotations
     void Start()
     {
         targetRb = GetComponent<Rigidbody>();
@@ -30,13 +31,7 @@ public class Target : MonoBehaviour
         transform.position = RandomSpawnPos();
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
+//when the mouse is pressed down if destroy, explode and, update score.
     private void OnMouseDown()
     {
         if( gameManager.isGameActive)
@@ -46,7 +41,7 @@ public class Target : MonoBehaviour
             gameManager.UpdateScore(pointValue);
         }
     }
-
+//if the object that touches the trigger is NOT BAD send out game over
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
@@ -57,7 +52,7 @@ public class Target : MonoBehaviour
         }
 
     }
-
+//variables for the spawning algorithm...
     Vector3 RandomForce()
     {
         return Vector3.up * Random.Range(minSpeed,maxSpeed);
