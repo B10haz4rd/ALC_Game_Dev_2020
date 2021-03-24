@@ -23,11 +23,21 @@ public class GameManager : MonoBehaviour
 
     private float spawnRate = 1.0f;
 
-    
+    private AudioSource playerAudio;
+
+    public AudioClip bangOnBox;
+
+    private void Start()
+    {
+        playerAudio = GetComponent<AudioSource>();
+    }
+
+
     //when the mouse is clicked down on an object, that object is deleted.
     private void OnMouseDown()
     {
         Destroy(gameObject);
+        playerAudio.PlayOneShot(bangOnBox, 1.0f);
     }
     
     //when something collides with the object below the screen and is triggerd, delete it.
