@@ -40,6 +40,7 @@ public class Target : MonoBehaviour
         if( gameManager.isGameActive)
         {
             Destroy(gameObject);
+            gameManager.playerAudio.PlayOneShot(gameManager.bangOnBox, 1.0f);
             Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
             gameManager.UpdateScore(pointValue);
         }

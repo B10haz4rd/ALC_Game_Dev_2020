@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 
     private float spawnRate = 1.0f;
 
-    private AudioSource playerAudio;
+    public AudioSource playerAudio;
 
     public AudioClip bangOnBox;
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     private void OnMouseDown()
     {
         Destroy(gameObject);
-        playerAudio.PlayOneShot(bangOnBox, 1.0f);
+
     }
     
     //when something collides with the object below the screen and is triggerd, delete it.

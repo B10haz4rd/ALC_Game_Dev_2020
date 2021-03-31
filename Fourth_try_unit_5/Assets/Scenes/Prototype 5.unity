@@ -1621,6 +1621,7 @@ MonoBehaviour:
   restartButton: {fileID: 80253076}
   titleScreen: {fileID: 498109341}
   isGameActive: 0
+  playerAudio: {fileID: 0}
   bangOnBox: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
 --- !u!4 &1206867596
 Transform:
